@@ -28,7 +28,7 @@ public class ThreadTrain_5 implements Runnable {
     public void run() {
 
         if (flag) {
-            while (trainCount > 0) {
+            while (trainCount > 0) {//线程t1就会一直走这里的方法
                 synchronized (oj) {
                     try {
                         Thread.sleep(10);
@@ -39,7 +39,7 @@ public class ThreadTrain_5 implements Runnable {
                 }
             }
         } else {
-            while (trainCount > 0) {
+            while (trainCount > 0) {//线程t2就会一直走这里的方法
                 sale();
             }
 

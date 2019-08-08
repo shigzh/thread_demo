@@ -14,7 +14,7 @@ public class ThreadTrain_3 implements Runnable {
 
     public void run() {
         if (flag) {
-            while (trainCount > 0) {
+            while (trainCount > 0) {//线程t1就会一直走这里的方法
                 synchronized (this) {
                     try {
                         Thread.sleep(10);
@@ -22,14 +22,14 @@ public class ThreadTrain_3 implements Runnable {
                         // TODO: handle exception
                     }
                     if (trainCount > 0) {
-                        System.out.println(Thread.currentThread().getName() + "," + "出售第" + (100 - trainCount + 1) + "票========》》》同步代码块执行");
+                        System.out.println(Thread.currentThread().getName() + "," + "出售第" + (100 - trainCount + 1) + "票========》》》同步代码块执行===t1");
                         trainCount--;
                     }
                 }
 
             }
         } else {
-            while (trainCount > 0) {
+            while (trainCount > 0) {//线程t2就会一直走这里的方法
                 sale();
             }
 
@@ -44,7 +44,7 @@ public class ThreadTrain_3 implements Runnable {
             // TODO: handle exception
         }
         if (trainCount > 0) {
-            System.out.println(Thread.currentThread().getName() + "," + "出售第" + (100 - trainCount + 1) + "票========》》》同步方法执行");
+            System.out.println(Thread.currentThread().getName() + "," + "出售第" + (100 - trainCount + 1) + "票========》》》同步方法执行===t2");
             trainCount--;
         }
 
