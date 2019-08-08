@@ -56,7 +56,7 @@ public class ThreadTrain_3 implements Runnable {
         Thread t2 = new Thread(threadTrain, "窗口2");
         t1.start();
         Thread.sleep(40);
-        threadTrain.flag = false;
+        threadTrain.flag = false;//控制线程t1执行同步代码块里的方法，t2执行同步方法里的方法
         t2.start();
 
     }
