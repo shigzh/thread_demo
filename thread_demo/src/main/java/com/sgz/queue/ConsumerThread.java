@@ -25,7 +25,7 @@ class ConsumerThread implements Runnable {
                 if (data == null) {
                     flag = false;
                     System.out.println(Thread.currentThread().getName() +",消费者超过2秒时间未获取到消息.");
-                    return;
+                    return;//这里return会跳出循环
                 }
                 System.out.println(Thread.currentThread().getName() +",消费者获取到队列信息成功,data:" + data);
             }
