@@ -24,7 +24,8 @@ public class QueueDemo002 {
         //offer: 只一个参数：非阻塞式添加元素，如果队列满了，不阻塞
         boolean o4 =blockingQueue.offer("赵六");
         System.out.println("o4："+o4);
-        //offer: 3个参数：阻塞式添加元素，如果队列满了，阻塞着，阻塞时间是有后两个参数来指定，如果队列没有满后面两个参数没有意义，不会进行阻塞
+        //offer: 3个参数：阻塞式添加元素，如果队列满了，阻塞着，阻塞时间是有后两个参数来指定，时间过了之后如果还存不进去，这个数据就会丢失
+        // 如果队列没有满后面两个参数没有意义，不会进行阻塞
         boolean o5 =blockingQueue.offer("孙七", 3, TimeUnit.SECONDS);
         System.out.println("o5："+o5);
         //获取队列，只能获取一个队列元素
