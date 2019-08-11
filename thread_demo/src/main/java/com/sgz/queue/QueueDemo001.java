@@ -3,7 +3,7 @@ package com.sgz.queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
- * @Description: 阻塞式队列最大好处，能够防止容器溢出，防止数据丢失
+ * @Description: 非阻塞式队列最大好处，能够防止容器溢出，防止数据丢失
  * 队列遵循原则：先进先出，后进后出
  * @Auther: shigzh
  * @create 2019/8/11 9:01
