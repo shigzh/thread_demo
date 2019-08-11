@@ -2,14 +2,13 @@ package com.sgz.queue;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Description: 阻塞式队列：存队列的时候如果满了就会等待，取队列的时候，如果获取不到（没有元素）也会等待
+ * @ Description: 阻塞式队列：存队列的时候如果满了就会等待，取队列的时候，如果获取不到（没有元素）也会等待
  * 队列遵循原则：先进先出，后进后出
- * @Auther: shigzh
- * @create 2019/8/11 9:01
+ * @ Auther: shigzh
+ * @ create 2019/8/11 9:01
  */
 public class QueueDemo002 {
     public static void main(String[] args) throws InterruptedException {
