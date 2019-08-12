@@ -1,6 +1,5 @@
 package com.sgz;
 
-import java.util.Random;
 import java.util.concurrent.Semaphore;
 
 /**
