@@ -17,6 +17,7 @@ public class QueueDemo002 {
         //往队列中存放元素
         boolean o1 =blockingQueue.offer("张三");
         System.out.println("o1："+o1);
+        //.add()没有阻塞
         boolean o2 =blockingQueue.offer("李四",3, TimeUnit.SECONDS);//队列没有满后面两个参数没有意义，不会进行阻塞
         System.out.println("o2："+o2);
         boolean o3 =blockingQueue.offer("王五");
@@ -52,7 +53,7 @@ public class QueueDemo002 {
         System.out.println(blockingQueue.poll());//null
         //获取队列个数
         System.out.println(blockingQueue.size());//0
-        //此时队列中已经没有元素了,使用2个参数：会阻塞等着指定的时间
+        //此时队列中已经没有元素了,使用2个参数：会阻塞等着指定的时间，.peek()方法没有阻塞
         System.out.println(blockingQueue.poll(3, TimeUnit.SECONDS));//null
         //获取队列个数
         System.out.println(blockingQueue.size());//0
