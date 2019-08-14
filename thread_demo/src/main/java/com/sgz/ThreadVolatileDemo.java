@@ -82,3 +82,11 @@ class ThreadVolatileDemo extends Thread {
 //		线程二执行完三个操作后将结果写回内存，由于线程一已经算出结果不会再去读取x的值，没有计算之前是立即从主存中读取的
 //
 //		所以线程一唤醒后接着写入，导致并发失败。volatile不具有原子性
+
+
+//
+//        我们知道volatile关键字具有禁止指令重排序的功能，而且能保证可见性，但不能保证原子性。synchronized关键字则不仅仅能保证可见性，还能保证原子性，
+//		那么synchronized关键字是否像volatile那样具有禁止指令重排序的功能呢？
+//		答案是肯定的，synchronized具有禁止重排序功能。
+//     根据 JSR-133 定义的 JMM，synchronized 的加锁和解锁之间能够有确定的顺序
+// https://blog.csdn.net/SHENMEGUI_32/article/details/77989760
