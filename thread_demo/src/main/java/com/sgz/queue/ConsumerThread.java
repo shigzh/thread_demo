@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Description: 消费者队列
+ * 这里return会跳出循环
  * @Auther: shigzh
  * @create 2019/8/11 10:31
  */
